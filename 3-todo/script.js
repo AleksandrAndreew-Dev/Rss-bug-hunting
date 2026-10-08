@@ -26,7 +26,7 @@ function toggleTask(id) {
   console.log(id);
   const task = tasks.find((t) => t.id === id);
   console.log(task);
-  task.done = true;
+  task.done = !task.done;
   console.log(task);
   render();
 }
