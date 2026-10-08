@@ -58,6 +58,7 @@ function updateCounter() {
 }
 
 function render() {
+  list.replaceChildren();
   const visible = getVisibleTasks();
   for (let i = 0; i < visible.length; i++) {
     const task = visible[i];
@@ -81,9 +82,9 @@ function render() {
       deleteTask(task.id),
     );
 
-    li.appendChild(span);
-    li.appendChild(del);
-    list.appendChild(li);
+    li.append(span);
+    li.append(del);
+    list.append(li);
   }
   updateCounter();
 }
